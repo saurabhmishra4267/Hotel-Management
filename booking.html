@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Stay — Grandé Hotel</title>
+  <meta name="description" content="Reserve your room at Grandé Hotel. Quick and easy booking with instant confirmation." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="site-navbar" class="navbar"></header>
+
+  <!-- ===== LOGIN REQUIRED NOTICE (NEW) =====
+       Shown by script.js when no user is logged in. The booking form
+       below is hidden in that case. -->
+  <section id="login-required-notice" style="padding-top:7rem;display:none">
+    <div class="container">
+      <div class="form-card animate-fade-up" style="text-align:center">
+        <h2>Please login to book a room</h2>
+        <p style="margin:1rem 0">You need a Grandé Hotel account to make a reservation.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="login.html" class="btn btn-primary">Login</a>
+          <a href="register.html" class="btn btn-gold">Register</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form -->
+  <section id="booking-section" style="padding-top:7rem;display:none">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Reservation</p>
+        <h1>Book Your Stay</h1>
+      </div>
+
+      <form id="booking-form" class="form-card animate-fade-up" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="guestName">Full Name</label>
+            <input type="text" id="guestName" name="guestName" placeholder="John Doe" />
+            <div class="error" data-error="guestName"></div>
+          </div>
+        </div>
+
+        <div class="form-row cols-2">
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" />
+            <div class="error" data-error="email"></div>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567" />
+            <div class="error" data-error="phone"></div>
+          </div>
+        </div>
+
+        <div class="form-row cols-2">
+          <div class="field">
+            <label for="checkIn">Check-In</label>
+            <input type="date" id="checkIn" name="checkIn" />
+            <div class="error" data-error="checkIn"></div>
+          </div>
+          <div class="field">
+            <label for="checkOut">Check-Out</label>
+            <input type="date" id="checkOut" name="checkOut" />
+            <div class="error" data-error="checkOut"></div>
+          </div>
+        </div>
+
+        <div class="form-row cols-2">
+          <div class="field">
+            <label for="roomType">Room Type</label>
+            <select id="roomType" name="roomType">
+              <option value="single">Single — $120/night</option>
+              <option value="double">Double — $200/night</option>
+              <option value="deluxe">Deluxe — $350/night</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="guests">Number of Guests</label>
+            <input type="number" id="guests" name="guests" min="1" max="6" value="1" />
+            <div class="error" data-error="guests"></div>
+          </div>
+        </div>
+
+        <div id="price-summary" class="summary-box" style="display:none">
+          <p class="summary-line"></p>
+          <p class="total"></p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Confirm Booking</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Confirmation -->
+  <section id="confirmation" style="display:none;padding-top:7rem">
+    <div class="container">
+      <div class="confirmation animate-fade-up">
+        <div class="check">✓</div>
+        <h1>Booking Confirmed!</h1>
+        <p>Thank you, <strong class="c-name"></strong>. Your <strong class="c-room"></strong> room is booked.</p>
+        <p class="c-dates"></p>
+        <button id="book-another" class="btn btn-primary" style="margin-top:1rem">Book Another Room</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Grandé Hotel</h4><p style="opacity:.8;font-size:.9rem">Luxury hospitality at its finest.</p></div>
+        <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="rooms.html">Rooms</a></li><li><a href="booking.html">Booking</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li>123 Grandé Avenue</li><li>+1 (555) 123-4567</li><li>info@grandehotel.com</li></ul></div>
+      </div>
+      <div class="footer-bottom">© 2025 Grandé Hotel. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

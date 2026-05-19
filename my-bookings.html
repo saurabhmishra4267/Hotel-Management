@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bookings — Grandé Hotel</title>
+  <meta name="description" content="View your reservations at Grandé Hotel." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation (same as other pages) ===== -->
+  <header id="site-navbar" class="navbar"></header>
+
+  <!-- ===== My Bookings Section ===== -->
+  <section style="padding-top:7rem;padding-bottom:3rem">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Your reservations</p>
+        <h1>My Bookings</h1>
+      </div>
+
+      <!-- Shown if user is NOT logged in -->
+      <div id="mb-login-required" class="form-card animate-fade-up" style="display:none;text-align:center">
+        <h2>Please login to view your bookings</h2>
+        <p style="margin:1rem 0">You need to be signed in to see your reservations.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <a href="login.html" class="btn btn-primary">Login</a>
+          <a href="register.html" class="btn btn-gold">Register</a>
+        </div>
+      </div>
+
+      <!-- Shown if user is logged in but has no bookings -->
+      <div id="mb-empty" class="form-card animate-fade-up" style="display:none;text-align:center">
+        <h2>No bookings found</h2>
+        <p style="margin:1rem 0">You haven't made any reservations yet.</p>
+        <a href="booking.html" class="btn btn-primary">Book a Room</a>
+      </div>
+
+      <!-- Bookings list rendered here by script.js -->
+      <div id="mb-list" class="bookings-grid"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Grandé Hotel</h4><p style="opacity:.8;font-size:.9rem">Luxury hospitality at its finest.</p></div>
+        <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="rooms.html">Rooms</a></li><li><a href="booking.html">Booking</a></li><li><a href="my-bookings.html">My Bookings</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li>123 Grandé Avenue</li><li>+1 (555) 123-4567</li><li>info@grandehotel.com</li></ul></div>
+      </div>
+      <div class="footer-bottom">© 2025 Grandé Hotel. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

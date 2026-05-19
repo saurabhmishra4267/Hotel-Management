@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Login — Grandé Hotel</title>
+  <meta name="description" content="Admin login for Grandé Hotel management dashboard." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation (same as other pages) ===== -->
+  <header id="site-navbar" class="navbar"></header>
+
+  <!-- ===== Admin Login Form ===== -->
+  <section style="padding-top:7rem">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Restricted Area</p>
+        <h1>Admin Login</h1>
+      </div>
+
+      <form id="admin-login-form" class="form-card animate-fade-up" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="admin-username">Username</label>
+            <input type="text" id="admin-username" name="username" placeholder="admin" autocomplete="username" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="admin-password">Password</label>
+            <input type="password" id="admin-password" name="password" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+        </div>
+
+        <!-- Error message shown on invalid credentials -->
+        <div id="admin-login-error" class="error" style="margin-bottom:1rem;text-align:center"></div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer" style="margin-top:4rem">
+    <div class="container">
+      <div class="footer-bottom">© 2025 Grandé Hotel. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

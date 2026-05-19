@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Grandé Hotel</title>
+  <meta name="description" content="Get in touch with Grandé Hotel. We're here to help with reservations, special requests, and inquiries." />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header id="site-navbar" class="navbar"></header>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Send us a message and we'll respond shortly.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container" style="display:grid;grid-template-columns:1fr;gap:2rem;max-width:900px">
+      <div class="rooms-grid">
+        <div class="amenity"><div class="amenity-icon"><i class="fa-solid fa-map-pin"></i></div><span>123 Grande Avenue<br>City, Country</span></div>
+        <div class="amenity"><div class="amenity-icon"><i class="fa-solid fa-phone"></i></div><span>+1 (555) 123-4567</span></div>
+        <div class="amenity"><div class="amenity-icon"><i class="fa-solid fa-envelope"></i></div><span>info@grandehotel.com</span></div>
+      </div>
+
+      <form id="contact-form" class="form-card animate-fade-up">
+        <div class="form-row cols-2">
+          <div class="field">
+            <label for="c-name">Name</label>
+            <input type="text" id="c-name" name="name" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="c-email">Email</label>
+            <input type="email" id="c-email" name="email" placeholder="you@example.com" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea id="c-message" name="message" placeholder="Your message..."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Grandé Hotel</h4><p style="opacity:.8;font-size:.9rem">Luxury hospitality at its finest.</p></div>
+        <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="rooms.html">Rooms</a></li><li><a href="booking.html">Booking</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li>123 Grande Avenue</li><li>+1 (555) 123-4567</li><li>info@grandehotel.com</li></ul></div>
+      </div>
+      <div class="footer-bottom">© 2025 Grandé Hotel. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

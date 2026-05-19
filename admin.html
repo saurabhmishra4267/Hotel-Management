@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Grandé Hotel</title>
+  <meta name="description" content="Hotel admin dashboard for managing bookings and viewing reservation statistics." />
+  <link rel="stylesheet" href="style.css" />
+  <!-- ===== ADMIN ACCESS GUARD =====
+       Runs BEFORE the page renders. If admin is not logged in,
+       redirect to admin-login.html immediately. -->
+  <script>
+    if (localStorage.getItem("isAdminLoggedIn") !== "true") {
+      window.location.replace("admin-login.html");
+    }
+  </script>
+</head>
+<body>
+
+  <header id="site-navbar" class="navbar"></header>
+
+  <section class="page-header">
+    <div class="container">
+      <p class="section-eyebrow">Management</p>
+      <h1>Admin Dashboard</h1>
+      <p>View and manage all reservations.</p>
+      <!-- ===== ADMIN LOGOUT BUTTON ===== -->
+      <button id="admin-logout-btn" class="btn btn-destructive btn-sm" style="margin-top:1rem">Logout</button>
+    </div>
+  </section>
+
+  <section style="padding-top:2rem">
+    <div class="container">
+
+      <!-- Stats -->
+      <div class="stats-grid animate-fade-up">
+        <div class="stat-card"><div class="label">Total Bookings</div><div class="value" id="stat-bookings">0</div></div>
+        <div class="stat-card"><div class="label">Total Revenue</div><div class="value" id="stat-revenue">$0</div></div>
+        <div class="stat-card"><div class="label">Total Guests</div><div class="value" id="stat-guests">0</div></div>
+        <div class="stat-card"><div class="label">Avg. Booking</div><div class="value" id="stat-avg">$0</div></div>
+      </div>
+
+      <!-- Table -->
+      <div class="bookings-table-wrap animate-fade-up">
+        <table>
+          <thead>
+            <tr>
+              <th>Guest</th>
+              <th>Phone</th>
+              <th>Room</th>
+              <th>Dates</th>
+              <th>Guests</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="bookings-body"></tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer" style="margin-top:4rem">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Grandé Hotel</h4><p style="opacity:.8;font-size:.9rem">Luxury hospitality at its finest.</p></div>
+        <div><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="rooms.html">Rooms</a></li><li><a href="booking.html">Booking</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Contact</h4><ul><li>123 Grandé Avenue</li><li>+1 (555) 123-4567</li><li>info@grandehotel.com</li></ul></div>
+      </div>
+      <div class="footer-bottom">© 2025 Grandé Hotel. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

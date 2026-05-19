@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — Grandé Hotel</title>
+  <meta name="description" content="Login to your Grandé Hotel account." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navigation ===== -->
+  <header id="site-navbar" class="navbar"></header>
+
+  <!-- ===== Login Form ===== -->
+  <section style="padding-top:7rem">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-eyebrow">Welcome Back</p>
+        <h1>User Login</h1>
+      </div>
+
+      <form id="user-login-form" class="form-card animate-fade-up" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" name="email" placeholder="john@example.com" autocomplete="email" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" name="password" placeholder="••••••••" autocomplete="current-password" />
+          </div>
+        </div>
+
+        <!-- Error message for invalid credentials -->
+        <div id="user-login-error" class="error" style="margin-bottom:1rem;text-align:center"></div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+        <p style="text-align:center;margin-top:1rem;font-size:.9rem">
+          No account yet? <a href="register.html">Register here</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer" style="margin-top:4rem">
+    <div class="container">
+      <div class="footer-bottom">© 2025 Grandé Hotel. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
